@@ -1,0 +1,51 @@
+{
+  "name": "typescript-plugin-caution",
+  "version": "0.1.0",
+  "description": "TypeScript language service plugin that warns at usages of symbols marked with a JSDoc tag such as @caution",
+  "keywords": [
+    "typescript",
+    "typescript-plugin",
+    "language-service",
+    "tsserver",
+    "jsdoc",
+    "caution"
+  ],
+  "homepage": "https://github.com/pkhc4025/typescript-plugin-caution#readme",
+  "bugs": {
+    "url": "https://github.com/pkhc4025/typescript-plugin-caution/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkhc4025/typescript-plugin-caution.git"
+  },
+  "license": "MIT",
+  "author": "pkhc4025",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "watch": "tsc -p tsconfig.build.json --watch",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "yarn build && vitest run",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.10.0",
+    "typescript": "5.9.3",
+    "typescript-5.8": "npm:typescript@5.8.3",
+    "typescript-6.0": "npm:typescript@6.0.3",
+    "typescript-eslint": "^8.72.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  },
+  "packageManager": "yarn@4.12.0"
+}
